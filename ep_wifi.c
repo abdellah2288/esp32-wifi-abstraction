@@ -102,8 +102,8 @@ void init_wifi(char mode , access_point_t ap )
     };
     wifi_config_t cfg_sta = {
             .sta = {
-                .ssid = ap.ssid,
-                .password = ap.password,
+                .ssid = {ap.ssid},
+                .password = {ap.password},
             },
             };
     ESP_ERROR_CHECK(esp_wifi_init(&cfg_default));
