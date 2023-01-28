@@ -1,5 +1,4 @@
 version: "1.0.0"
 description: Contains useful function to facilitate networking on the esp32
 
-dependencies:
-  idf: "^4.1"
+
