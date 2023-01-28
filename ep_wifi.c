@@ -5,7 +5,7 @@
  *      being able to connect to a network and discover access points is sufficient 
  *
  */
-#include "wifi.h"
+#include "ep_wifi.h"
 #include "esp_log.h"
 #include "esp_wifi.h"
 #include "esp_wifi_types.h"
