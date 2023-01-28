@@ -12,11 +12,11 @@
 
 #define MAIN_WIFI_H_
 /* macros for custom access point config */
-#define WIFI_AP_SSID "EDP445"
-#define WIFI_AP_PASSWORD "cupcake"
+#define WIFI_AP_SSID "Smart_house"
+#define WIFI_AP_PASSWORD "theyearofthelinuxdesktop"
 #define WIFI_AP_CHANNEL 1 // Just use channel 1 no need to worry about interference or legal bullshit
 #define WIFI_AP_HIDDEN 0 // Don't hide the network, let the feds know you're there
-#define WIFI_AP_MAX_CONNECTIONS  12 // is it 12 + the Adoul or 11 + the Adoul ??
+#define WIFI_AP_MAX_CONNECTIONS  12 
 #define WIFI_AP_BEACON 100 // Determines how often the beacon (access point) will advertise itself (share relevant info like the SSID AUTH_MODE ... etc)
 #define WIFI_AP_IP "192.168.4.1" // Just use the default, no need to get fancy
 #define WIFI_AP_GATEWAY "192.168.4.1" // ever visited 192.168.1.1 ? Yeah, that's what a gateway is.

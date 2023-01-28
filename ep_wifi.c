@@ -10,6 +10,7 @@
 #include "esp_wifi.h"
 #include "esp_wifi_types.h"
 #include "esp_event.h"
+#include <string.h>
 // check the header file first
 
 static const char *TAG = "scan";
@@ -102,10 +103,12 @@ void init_wifi(char mode , access_point_t ap )
     };
     wifi_config_t cfg_sta = {
             .sta = {
-                .ssid = {ap.ssid},
-                .password = {ap.password},
+                .ssid ="",
+                .password = "",
             },
             };
+    memcpy((cfg_sta.sta).ssid, ap.ssid,32);
+    memcpy((cfg_sta.sta).password, ap.password,64);
     ESP_ERROR_CHECK(esp_wifi_init(&cfg_default));
     switch(mode)
     {
@@ -119,6 +122,7 @@ void init_wifi(char mode , access_point_t ap )
         ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_STA, &cfg_sta));
         ESP_ERROR_CHECK(esp_wifi_start()); // start the wifi according to the current configuration 
         ESP_ERROR_CHECK(esp_wifi_connect());
+        break;
         case 'a':
         
         esp_netif_t *ap_netif = esp_netif_create_default_wifi_ap();
