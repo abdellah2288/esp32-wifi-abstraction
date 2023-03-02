@@ -1,10 +1,4 @@
-/*
- *		Author: Abdellah Radad 
- *		Licensed under GPL V2
- *	This esp-idf component handles networking on the esp32, for our purposes 
- *      being able to connect to a network and discover access points is sufficient 
- *
- */
+
 #include "ep_wifi.h"
 #include "esp_log.h"
 #include "esp_wifi.h"
